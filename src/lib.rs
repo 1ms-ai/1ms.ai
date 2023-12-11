@@ -25,10 +25,42 @@ pub fn main_js() -> Result<(), JsValue> {
     let body = document.body().expect("document should have a body");
 
     // Manufacture the element we're gonna append
-    let val = document.create_element("h2")?;
-    val.set_text_content(Some("1ms.ai is getting started!"));
-    body.append_child(&val)?;
+    let span = document.create_element("h2")?;
+    let val = document.create_element("a")?;
+    val.set_text_content(Some("1ms.ai"));
+    val.set_attribute("href", "/")?;
+    span.append_child(&val)?;
+    let h2 = document.create_element("e")?;
+    h2.set_text_content(Some(" is starting!"));
+    span.append_child(&h2)?;
+    body.append_child(&span)?;
 
+    let val = document.create_element("p")?;
+    val.set_text_content(Some("> ls"));
+    body.append_child(&val)?;
+    
+    let val = document.create_element("a")?;
+    val.set_text_content(Some("projects"));
+    val.set_attribute("href", "/projects")?;
+    body.append_child(&val)?;
+    
+    let val = document.create_element("br")?;
+    body.append_child(&val)?;
+    
+    let val = document.create_element("a")?;
+    val.set_text_content (Some("jobs"));
+    val.set_attribute("href", "/projects")?;
+    body.append_child(&val)?;
+    
+
+    let span = document.create_element("span")?;
+    span.set_class_name("prompt");
+    
+    let val = document.create_element("p")?;
+    val.set_text_content(Some(">"));
+  //  val.set_class_name("prompt");
+    span.append_child(&val)?;
+    body.append_child(&span)?;
     // let val = document.create_element("a")?;
     // val.set_text_content(Some("> jobs?"));
     // val.set_attribute("href", "www.google.com")?;
