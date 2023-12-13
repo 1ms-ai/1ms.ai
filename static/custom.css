@@ -1,7 +1,7 @@
 @import "@fontsouce/cousine";
 
 body {
-  font-family: "cousine";
+  font-family: "cousine", sans-serif !important;
   font-size: 3em;
   padding-left: 1em;
   background-color: rgb(42, 39, 39);
@@ -29,8 +29,8 @@ a:active { text-decoration: none; }
 
 .prompt p::after {
   content: "";
-  width: 1em;
-  height: 2em;
+  width: 0.8em;
+  height: 1.5em;
   background: #c7c6c8;
   display: inline-block;
 }
@@ -38,7 +38,7 @@ a:active { text-decoration: none; }
 .prompt p {
   display: flex;
   align-items: center;
-  gap: 0.8em;
+  gap: 0em;
 }
 
 @keyframes cursor-blink {

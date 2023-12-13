@@ -21,6 +21,7 @@ lto = true
 #default = ["wee_alloc"]
 
 [dependencies]
+indexmap = "2.1.0"
 # The `wasm-bindgen` crate provides the bare minimum functionality needed
 # to interact with JavaScript.
 wasm-bindgen = "0.2.45"
@@ -33,8 +34,8 @@ wee_alloc = { version = "0.4.2", optional = true }
 # The `web-sys` crate allows you to interact with the various browser APIs,
 # like the DOM.
 [dependencies.web-sys]
-version = "0.3.22"
-features = ["Document", "Element", "HtmlElement", "Node", "Window"]
+version = "0.3.66"
+features = ["Document", "Element", "HtmlElement", "Node", "Window", "Url", "UrlSearchParams"]
 
 # The `console_error_panic_hook` crate provides better debugging of panics by
 # logging them with `console.error`. This is great for development, but requires
@@ -49,10 +50,3 @@ wasm-bindgen-test = "0.2.45"
 futures = "0.1.27"
 js-sys = "0.3.22"
 wasm-bindgen-futures = "0.3.22"
-nu-cli = "0.87.1"
-nu-cmd-lang = "0.87.1"
-nu-command = { version = "0.87.1", features = ["which-support"] }
-nu-engine = "0.87.1"
-nu-parser = "0.87.1"
-nu-path = "0.87.1"
-nu-protocol = "0.87.1"
